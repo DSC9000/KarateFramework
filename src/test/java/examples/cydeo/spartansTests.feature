@@ -20,5 +20,25 @@ Feature: Testing different End Points with Spartans API
     Then match each response.content[*].gender == 'Female'
     Then match response.totalElement == 6
   @wip
-  Scenario:
+  Scenario: POST a new spartan to API and use spartan generator Java File
+    When def SpartanDG = Java.type("examples.utilities.SpartanDataGenerator")
+    And def newSpartan = SpartanDG.createSpartan()
+    Given url spartanUrl
+    And path "api/spartans"
+    And header Accept = "application/json"
+    And header Content-Type = "application/json"
+    And request newSpartan
+    And method POST
+    Then status 201
+    And match response.success == "A Spartan is Born!"
+    And match response.data.name == newSpartan.name
+
+
+
+
+
+
+
+
+
 

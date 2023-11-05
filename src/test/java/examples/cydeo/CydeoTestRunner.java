@@ -6,7 +6,7 @@ public class CydeoTestRunner {
 
     @Karate.Test
     Karate testCydeo() {
-        return Karate.run("bookStoreAPI").tags("@wip").relativeTo(getClass());
+        return Karate.run("spartansTests").tags("@wip").relativeTo(getClass());
     }
 
 }
