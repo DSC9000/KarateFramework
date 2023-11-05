@@ -6,6 +6,7 @@ Feature: Learning Basics with Karate Framework
     Then print result
     # all same with arithmetic operations of Java
     And def name = 'Michael'
+    * print name," Hello"
     # single or double quotation does not matter
     And def age = 30
     # we are using all kind of Data Types just one key word 'def'
@@ -20,7 +21,7 @@ Feature: Learning Basics with Karate Framework
     """
     Then print oneSpartan.name
 
-@wip
+@smoke
   Scenario: Read a data from a file
     When def spartans = read("classpath:examples/testData/fourSpartans.json")
     * print spartans

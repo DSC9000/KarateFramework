@@ -18,7 +18,8 @@ class ExamplesTest {
 
     @Test
     void testParallel() {
-        Results results = Runner.path("classpath:examples")
+        Results results = Runner.path("classpath:examples").tags("@wip")
+                // we use ~ tilde sign to ignore some scenarios from parallel running
                 .outputCucumberJson(true)
                 .parallel(5);
         generateReport(results.getReportDir());

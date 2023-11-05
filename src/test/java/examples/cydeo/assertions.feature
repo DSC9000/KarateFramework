@@ -25,7 +25,7 @@ Feature: Learn different type assertions in Karate
     * match oneSpartan.phone == "#present"
     * match oneSpartan.weapon == "#notpresent"
 
-  @wip
+  @smoke
   Scenario: match each assertions, looping inside an JSON object and verify
     # verify that each spartan id is number
   * match each fourSpartans[*].id == "#number"
