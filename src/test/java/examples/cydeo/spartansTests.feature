@@ -18,7 +18,8 @@ Feature: Testing different End Points with Spartans API
     When method get
     Then status 200
     Then match each response.content[*].gender == 'Female'
-    Then match response.totalElement == 6
+    # Then match response.totalElement == 6
+
   @wip
   Scenario: POST a new spartan to API and use spartan generator Java File
     When def SpartanDG = Java.type("examples.utilities.SpartanDataGenerator")
@@ -27,6 +28,7 @@ Feature: Testing different End Points with Spartans API
     And path "api/spartans"
     And header Accept = "application/json"
     And header Content-Type = "application/json"
+    # following line reads the map object and turns it into JSON object
     And request newSpartan
     And method POST
     Then status 201

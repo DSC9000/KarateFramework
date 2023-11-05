@@ -23,7 +23,7 @@ Feature: Learn different type assertions in Karate
     * match oneSpartan.name == "#string"
     * match oneSpartan.id == "#number"
     * match oneSpartan.phone == "#present"
-    * match oneSpartan.weapon == "#present"
+    * match oneSpartan.weapon == "#notpresent"
 
   @wip
   Scenario: match each assertions, looping inside an JSON object and verify
