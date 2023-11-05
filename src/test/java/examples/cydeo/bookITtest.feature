@@ -14,7 +14,6 @@ Feature: Get token from other feature and verify API user information
     "role": "teacher"
     }
     """
-@wip
   Scenario: Verify user information
     Given url baseUrl
     And path "api/users/me"
@@ -22,3 +21,6 @@ Feature: Get token from other feature and verify API user information
     And header Authorization = 'Bearer',accessToken
     When method GET
     Then match response == expectedUser
+
+
+
