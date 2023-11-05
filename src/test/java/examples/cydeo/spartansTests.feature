@@ -10,7 +10,6 @@ Feature: Testing different End Points with Spartans API
     When method get
     Then status 200
     Then match response == expectedSpartan
-  @wip
   Scenario: Execute query parameters
     Given url spartanUrl
     And path "api/spartans/search"
@@ -20,4 +19,6 @@ Feature: Testing different End Points with Spartans API
     Then status 200
     Then match each response.content[*].gender == 'Female'
     Then match response.totalElement == 6
+  @wip
+  Scenario:
 
